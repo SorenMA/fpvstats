@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <h1>
+            FPV ELO
+        </h1>
+        <ul>
+            {% for name, profile in profiles.items() %}
+            <li>
+                <a href="{{ name | replace(" ","_") }}.html">{{ name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

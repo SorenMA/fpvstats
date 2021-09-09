@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h3>
+            {{ name }}
+        </h3>
+        <p>
+            elo: {{ profile.elo }}
+        </p>
+        <table>
+            {% for tournamentname, tournament in profile.tournaments.items() %}
+            <tr>
+                <td>
+                    {{ tournamentname }}
+                </td>
+                <td>
+                    {{ tournament.placement }} / {{ tournament.total }}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
