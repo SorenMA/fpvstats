@@ -21,7 +21,7 @@ print("{" + "\n".join("{!r}: {!r},".format(k, v) for k, v in eloranked) + "}")
 
 
 env = Environment(
-    loader=FileSystemLoader('%s/templates/' % os.path.dirname(__file__)),
+    loader=FileSystemLoader('%s/templates/' % os.path.dirname(os.path.abspath(__file__))),
     autoescape=select_autoescape()
 )
 pilottemplate = env.get_template("pilot.html")
